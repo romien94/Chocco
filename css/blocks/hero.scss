@@ -26,15 +26,17 @@
 }
 
 .hero__decor {
+  max-width: 55%;
   position: absolute;
   &--fern {
     right: 0;
     bottom: 0;
     @include tablets {
-      transform: translateY(-20%);
+      transform: translateY(-68%);
     }
   }
   &--bars {
+    height: 50%;
     top: 0;
     right: 0;
     transform: translateY(20%);
@@ -42,11 +44,10 @@
       width: 60%;
       right: 10%;
       top: 50%;
-      transform: translate(-50%,3%);
+      transform: translate(-26%,-85%);
     }
     @include phones {
     width: 70%;
-    transform: translate(-20%,3%);
     }
   }
 }

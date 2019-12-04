@@ -36,6 +36,7 @@
   flex-direction: row;
   width: 100%;
   margin-bottom: 1rem;
+  justify-content: flex-start;
 }
 
 .form__row--radio {
@@ -70,10 +71,14 @@
   height: 10rem;
 }
 
-.form__title--radio {
+.form__title--radio,
+.form__title--checkbox {
+  position: relative;
   display: flex;
   flex-direction: row;
   margin-right: 1rem;
+  margin-bottom: 0;
+  align-items: center;
   @include tablets {
     justify-content: center;
   }
@@ -86,11 +91,16 @@
 
 .form__title--radio:before,
 .form__title--checkbox:before {
+  display: flex;
   content: "";
   width: 1.38rem;
   height: 1.38rem;
   background-color: white;
   margin-right: 0.5rem;
+flex-direction: row;
+}
+
+.form__title--radio:before {
   border-radius: 50%;
 }
 
@@ -101,8 +111,10 @@
   height: 1rem;
   top: 0%;
   left: 0;
-  background-color: violet;;
+  background-color: $green;
+  border-radius: 50%;
 }
+
 
 .form__block--radio {
   @include tablets {
@@ -122,6 +134,8 @@
 }
 
 .form__row--center {
-  justify-content: center;
+  @include tablets {
+    justify-content: center;
+  }
 }
 

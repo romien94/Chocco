@@ -31,15 +31,19 @@
 }
 
 .bars-slider__left,.bars-slider__right {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
   @include tablets {
     width: 100%;
     height: 50%;
   }
+}
+
+.bars-slider__left {
+  margin-right: 5.27rem;
 }
 
 .bars-slider__right {
@@ -116,6 +120,7 @@
 
 .bars-slider__purchase {
   display: flex;
+  align-items: center;
 }
 
 .bars-slider__purchase-price {
@@ -127,11 +132,13 @@
 
 .bars-slider__image {
   position: relative;
+  height: 100%;
 }
 
 .bars-slider__image-pic {
   position: relative;
   z-index: 10;
+  max-height: 100%;
 }
 
 .bars-slider__image:after {
