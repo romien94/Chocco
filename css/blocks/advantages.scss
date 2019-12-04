@@ -57,6 +57,9 @@
 }
 
 .advantages__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 6.94rem;
   height: 6.94rem;
   border-radius: 50%;
@@ -84,4 +87,13 @@
   @include tablets {
     margin-bottom: 1rem;
   }
+}
+
+.advantages__icon-pic {
+  fill:none;
+  stroke:#000000;
+  stroke-width:0.75;
+  stroke-miterlimit:10;
+  width: 65px;
+  height: 70px;
 }

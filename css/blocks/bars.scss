@@ -81,9 +81,13 @@
 .bars-slider__consist-image {
   width: 2.8rem;
   height: 2.8rem;
-  background-color: white;
   margin-bottom: 0.5rem;
+  fill:white;
+  stroke:#000000;
+  stroke-width: 0.5;
+  stroke-miterlimit:10;
 }
+
 
 .bars-slider__title {
   font-size: 2rem;
