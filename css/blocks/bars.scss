@@ -1,0 +1,148 @@
+.bars {
+  background-color: $grey;
+}
+
+.bars-slider {
+  width: 100%;
+}
+
+.bars-slider__list {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  overflow: hidden;
+  @include tablets {
+    width: 87%;
+  }
+}
+
+
+.bars-slider__item {
+  margin: 0 auto;
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.bars-slider__item--active {
+  position: relative;
+  display: flex; 
+}
+
+.bars-slider__left,.bars-slider__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include tablets {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.bars-slider__right {
+  align-items: flex-start;
+  @include tablets {
+    align-items: center;
+  }
+}
+
+.bars-slider__consist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem 1.1rem;
+  background-color: $blue;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  border-radius: 0.27rem;
+  margin-bottom: 2rem;
+  @include tablets {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+}
+
+.bars-slider__consist:hover {
+  background-color: #00accf;
+}
+
+.bars-slider__consist-image {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: white;
+  margin-bottom: 0.5rem;
+}
+
+.bars-slider__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-style: bold;
+  margin-bottom: 1.38rem;
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.bars-slider__text {
+  width: 75%;
+  color: $dark-grey;
+  margin-bottom: 2.3rem;
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.bars-slider__info {
+  margin-left: -3.33rem;
+  border-spacing: 3.33rem 0;
+  margin-bottom: 2rem;
+}
+
+.bars-slider__info-title {
+  font-weight: normal;
+}
+
+.bars-slider__info-text {
+  font-weight: bold;
+}
+
+.bars-slider__purchase {
+  display: flex;
+}
+
+.bars-slider__purchase-price {
+  font-size:3.33rem;
+  font-weight: 300;
+  align-items: center;
+  margin-right: 1.7rem;
+}
+
+.bars-slider__image {
+  position: relative;
+}
+
+.bars-slider__image-pic {
+  position: relative;
+  z-index: 10;
+}
+
+.bars-slider__image:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(/Chocco/images/background/ellipsis.png);
+  top: 50%;
+  left: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-46%,-25%);
+}

@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-right: 2.5rem;
+  @include tablets {
+    display: none;
+  }
+}
+
+
+.nav__list--active .nav__item {
+  @include tablets {
+    margin-bottom: 2.2rem;
+    font-size: 2rem;
+  }
+}
+
+.nav__link, .nav__phone {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__phone {
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+  @include tablets {
+    display: none;
+  }
+}
+
+.nav__phone:before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(/Chocco/images/icons/phone.png) center center no-repeat;
+  margin-right: 0.3rem;
+  
+  @include tablets {
+    display: none;
+  }
+}
+

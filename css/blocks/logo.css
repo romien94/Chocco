@@ -1,0 +1,19 @@
+.logo, .logo__text {
+  width: 2.88rem;
+  font-family: 'Museo';
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2.5rem;
+}
+/*# sourceMappingURL=logo.css.map */

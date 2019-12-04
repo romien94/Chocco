@@ -1,0 +1,81 @@
+.team .section-title {
+  margin-bottom: 3.33rem;
+}
+
+.team__list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @include tablets {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5rem;
+    margin-right: -5%;
+  }
+  @include phones {
+    padding: 0 3rem;
+    justify-content: space-between;
+  }
+}
+
+.team__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.2rem;
+  text-align: center;
+  overflow: hidden;
+  @include tablets {
+    margin-right: 1rem;
+  }
+}
+
+
+.team__item--active {
+  overflow: visible;
+}
+
+.team__photo {
+  width: 12rem;
+  height: 16rem;
+  margin-bottom: 1.4rem;
+}
+
+.team__photo-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__name {
+  display: flex;
+  justify-content: center;
+  font-size: 1.16rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.team__name:after {
+  content: "";
+  border: 0.3rem solid transparent;
+  border-top-color: $green;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.team__info {
+  top: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.team__position {
+  margin-bottom: 0.5rem;
+}
+
+.team__text {
+  font-size: 0.95rem ;
+  font-weight: 300;
+}

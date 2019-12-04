@@ -1,0 +1,127 @@
+.delivery {
+  background: url(/Chocco/images/background/pattern.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form {
+  width: 100%;
+}
+
+.delivery__form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form__left, .form__right {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablets {
+    width: 80%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.form__row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form__row--radio {
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.form__block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1.1rem;
+  flex: 1;
+}
+
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__title {
+  color: $green;
+  margin-bottom: 0.4rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+}
+
+.form__input--review {
+  height: 10rem;
+}
+
+.form__title--radio {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.form__radio,.form__checkbox {
+  display: none;
+}
+
+
+.form__title--radio:before,
+.form__title--checkbox:before {
+  content: "";
+  width: 1.38rem;
+  height: 1.38rem;
+  background-color: white;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.form__radio:checked ~ .form__title--radio:after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 0%;
+  left: 0;
+  background-color: violet;;
+}
+
+.form__block--radio {
+  @include tablets {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.form__block--title:before {
+  border-radius: 0;
+}
+
+.reset-button {
+  background-color: transparent;
+  color: $green;
+  margin-left: 1.38rem;
+}
+
+.form__row--center {
+  justify-content: center;
+}
+
