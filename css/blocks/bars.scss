@@ -27,7 +27,9 @@
 
 .bars-slider__item--active {
   position: relative;
-  display: flex; 
+  @include phones {
+    align-items: center;
+  }
 }
 
 .bars-slider__left,.bars-slider__right {
