@@ -407,7 +407,7 @@ html, body {
       font-size: 14px; } }
   @media screen and (max-width: 480px) {
     html, body {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 body {
   font-family: 'Alegreya Sans'; }
@@ -634,7 +634,7 @@ h1, h2, h3, h4, h5, h6, p {
   align-items: center; }
 
 .logo, .logo__text {
-  width: 2.88rem;
+  width: 3.88rem;
   font-family: 'Museo';
   font-size: 24px;
   text-decoration: none;
