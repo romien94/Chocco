@@ -1117,10 +1117,17 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   margin-right: 1.2rem;
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   @media screen and (max-width: 768px) {
     .team__item {
       margin-right: 1rem; } }
+
+@media screen and (max-width: 480px) {
+  .team__item:nth-child(2n) {
+    margin-right: 0; } }
 
 .team__item--active {
   overflow: visible; }
@@ -1129,6 +1136,10 @@ h1, h2, h3, h4, h5, h6, p {
   width: 12rem;
   height: 16rem;
   margin-bottom: 1.4rem; }
+  @media screen and (max-width: 480px) {
+    .team__photo {
+      width: 8.11rem;
+      height: 10.27rem; } }
 
 .team__photo-pic {
   width: 100%;

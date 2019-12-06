@@ -25,8 +25,15 @@
   margin-right: 1.2rem;
   text-align: center;
   overflow: hidden;
+  align-items: center;
   @include tablets {
     margin-right: 1rem;
+  }
+}
+
+.team__item:nth-child(2n) {
+  @include phones {
+    margin-right: 0;
   }
 }
 
@@ -39,6 +46,10 @@
   width: 12rem;
   height: 16rem;
   margin-bottom: 1.4rem;
+  @include phones {
+    width: 8.11rem;
+    height: 10.27rem;
+  }
 }
 
 .team__photo-pic {
