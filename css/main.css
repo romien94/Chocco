@@ -407,7 +407,7 @@ html, body {
       font-size: 14px; } }
   @media screen and (max-width: 480px) {
     html, body {
-      font-size: 10px; } }
+      font-size: 12px; } }
 
 body {
   font-family: 'Alegreya Sans'; }
