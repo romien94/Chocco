@@ -5,8 +5,8 @@
 }
 
 .hero__container {
-  padding-top: 1.3rem;
-  padding-bottom: 2.5rem;
+  padding-top: rem(24px);
+  padding-bottom: rem(48px);
   justify-content: space-between;
   align-items: flex-start;
 
@@ -73,39 +73,45 @@
 }
 
 .hero__info-text {
+  font-size: rem(21px);
   width: 68%;
   margin-bottom: 1.8rem;
 }
 
 .hero__features {
   display: flex;
-  font-size: 0.9rem;
-  width: 100%;
+  font-size: rem(16px);
+  width: 51%;
+  @include tablets {
+    width: 72%;
+  }
+  @include phones {
+    width: 100%;
+  }
 }
 
 .hero__features-list {
   display: flex;
   width: 100%;
-  @include tablets {
-    justify-content: center;
-  } 
+  justify-content: space-between;
 }
 
 .hero__features-item {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   
   @include tablets {
     justify-content: center;
   }  
-  max-width: 30%;
+  @include phones {
+    width: rem(138px);
+  }
 }
 
 .hero__features-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: 0.66rem;
+  width: rem(45px);
+  margin-right: rem(9px);
 }
 
 .hero__features-pic {
@@ -116,7 +122,7 @@
 }
 
 .hero__features-title {
-  width: 45%;
+  max-width: 50%;
 }
 
 .fern__image,.bars__image {

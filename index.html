@@ -15,8 +15,8 @@
             <a href="#" class="logo">
               <span class="logo__text">Cho cco</span>
             </a>
-            <nav class="nav">
-              <ul class="nav__list nav__list--active">
+            <nav class="nav nav--active">
+              <ul class="nav__list">
                 <li class="nav__item">
                   <a href="#advantages" class="nav__link">О нас</a>
                 </li>
@@ -157,10 +157,15 @@
         </section>
         <section class="section bars" id="bars">
           <div class="container bars__container">
-            <a href="" class="bars__button bars__button--left"></a>
+            <a href="" class="bars__button bars__button--left">          
+            </a>
             <div class="bars__slider bars-slider">
               <ul class="bars-slider__list">
-                <li class="bars-slider__item bar-slider__item--active">
+                <li class="bars-slider__item bars-slider__item--active">
+                <li class="bars-slider__item">
+                <li class="bars-slider__item">
+                <li class="bars-slider__item">
+                <li class="bars-slider__item">
                   <div class="bars-slider__left">
                     <div class="bars-slider__image">
                       <img src="./images/misc/bars-seaweed.png" alt="" class="bars-slider__image-pic">
@@ -198,7 +203,9 @@
             </div>
             <a href="" class="bars__button bars__button--right"></a>
           </div>
-
+          <div class="bars__decor">
+            <img src="./images/background/bars-decor.png" alt="" class="bars__decor-image">
+          </div>
         </section>
         <section class="section team" id="team"">
           <div class="container team__container">
@@ -245,6 +252,9 @@
                 </div>
               </li>
             </ul>
+          </div>
+          <div class="team__decor">
+            <img src="./images/background/team-decor.png" alt="" class="team__decor-image">
           </div>
         </section>
         <section class="section reviews" id="reviews">
@@ -330,35 +340,35 @@
               <div class="delivery__form">
                 <div class="form__left">
                   <div class="form__row">
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Имя</span>
                       <input type="text" class="form__input">
                     </label>
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Телефон</span>
                       <input type="text" class="form__input">
                     </label>
                   </div>
                   <div class="form__row">
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Улица</span>
                       <input type="text" class="form__input">
                     </label>
                   </div>
                   <div class="form__row">
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Дом</span>
                       <input type="text" class="form__input">
                     </label>
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Корпус</span>
                       <input type="text" class="form__input">
                     </label>
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Квартира</span>
                       <input type="text" class="form__input">
                     </label>
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Этаж</span>
                       <input type="text" class="form__input">
                     </label>
@@ -366,23 +376,23 @@
                 </div>
                 <div class="form__right">
                   <div class="form__row">
-                    <label for="" class="form__block">
+                    <label  class="form__block">
                       <span class="form__title">Комментарий</span>
                       <textarea name="review" id="review" cols="30" rows="10" class="form__input form__input--review"></textarea>
                     </label>
                   </div>
                   <div class="form__row form__row--center">
-                    <label for="" class="form__block form__block--horizontal">
+                    <label class="form__block form__block--radio">
                       <input class="form__radio" type="radio" name="payment" id="payment-cash">
                       <span class="form__title form__title--radio">Потребуется сдача</span>
                     </label>
-                    <label for="" class="form__block form__block--horizontal">
-                      <input class="form__radio" type="radio" name="payment" id="payment-card">
+                    <label  class="form__block form__block--radio">
+                      <input class="form__radio" type="radio" name="payment" id="payment-cash">
                       <span class="form__title form__title--radio">Оплата картой</span>
                     </label>
                   </div>
                   <div class="form__row form__row--center"">
-                    <label for="" class="form__block form__block--horizontal">
+                    <label  class="form__block form__block--horizontal">
                       <input class="form__checkbox" type="checkbox" name="callback" id="callback-no">
                       <span class="form__title form__title--checkbox">Не перезванивать</span>
                     </label>
@@ -396,6 +406,50 @@
             </form>
           </div>
         </section>
+        <section class="section menu">
+          <div class="container menu__container">
+            <div class="menu__left">
+              <h2 class="section-title section-title--white">Меню</h2>
+            </div>
+            <div class="menu__right">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__title menu__title--coconut">
+                    <span class="menu__title-name">Батончики с молоком</span>
+                  </a>
+                  <div class="menu__desc">
+                      Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. 
+                      Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг 
+                      и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. 
+                      Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                  </div>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__title menu__title--coconut">
+                    <span class="menu__title-name">С мёдом и фруктами</span>
+                  </a>
+                    <div class="menu__desc">
+                        Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. 
+                        Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг 
+                        и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. 
+                        Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                    </div>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__title menu__title--coconut">
+                    <span class="menu__title-name">С дикими ягодами</span>
+                  </a>
+                    <div class="menu__desc">
+                        Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. 
+                        Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг 
+                        и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. 
+                        Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </section>
     </div>
+    <script src="/Chocco/js/bars.js"></script>
   </body>
 </html>

@@ -1,3 +1,7 @@
+.bars__container {
+  position: relative;
+}
+
 .bars {
   background-color: $grey;
 }
@@ -9,11 +13,7 @@
 .bars-slider__list {
   margin: 0 auto;
   display: flex;
-  width: 90%;
   overflow: hidden;
-  @include tablets {
-    width: 87%;
-  }
 }
 
 
@@ -38,14 +38,13 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  @include tablets {
-    width: 100%;
-    height: 50%;
-  }
 }
 
 .bars-slider__left {
-  margin-right: 5.27rem;
+  margin-right: rem(60px);
+  @include tablets {
+    margin-right: 0;
+  }
 }
 
 .bars-slider__right {
@@ -74,6 +73,7 @@
     top: 2%;
     right: 2%;
   }
+  z-index: 10;
 }
 
 .bars-slider__consist:hover {
@@ -138,13 +138,15 @@
 
 .bars-slider__image {
   position: relative;
-  height: 100%;
+  @include tablets {
+    width: rem(286px);
+  }
 }
 
 .bars-slider__image-pic {
   position: relative;
   z-index: 10;
-  max-height: 100%;
+  width: 100%;
 }
 
 .bars-slider__image:after {
@@ -159,3 +161,38 @@
   background-size: contain;
   transform: translate(-46%,-25%);
 }
+
+
+.bars__button, .bars__button:after {
+  position: absolute;
+  width: rem(30px);
+  height: rem(30px);
+  border-radius: 3px;
+  background-color: black;
+}
+
+.bars__button:after {
+  top: rem(3px);
+  content: "";
+  background-color: $grey;
+  left: rem(3px);
+}
+
+.bars__button--left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.bars__button--right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.bars__decor {
+  position: absolute;
+  top: 68%;
+  right: 0;
+}
+

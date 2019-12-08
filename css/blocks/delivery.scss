@@ -93,11 +93,11 @@
 .form__title--checkbox:before {
   display: flex;
   content: "";
-  width: 1.38rem;
-  height: 1.38rem;
+  width: rem(25px);
+  height: rem(25px);
   background-color: white;
   margin-right: 0.5rem;
-flex-direction: row;
+  flex-direction: row;
 }
 
 .form__title--radio:before {
@@ -107,12 +107,24 @@ flex-direction: row;
 .form__radio:checked ~ .form__title--radio:after {
   content: "";
   position: absolute;
-  width: 1rem;
-  height: 1rem;
-  top: 0%;
-  left: 0;
+  width: .8rem;
+  height: .8rem;
+  top: 6px;
+  left: 6px;
   background-color: $green;
   border-radius: 50%;
+}
+
+.form__checkbox:checked ~ .form__title:after {
+  position: absolute;
+  width: .8rem;
+  height: .8rem;
+  top: 6px;
+  left: 6px;
+  content: "";
+  width: 11px;
+  height: 9px;
+  background-image: url(/Chocco/images/background/check.png);
 }
 
 
@@ -131,11 +143,5 @@ flex-direction: row;
   background-color: transparent;
   color: $green;
   margin-left: 1.38rem;
-}
-
-.form__row--center {
-  @include tablets {
-    justify-content: center;
-  }
 }
 

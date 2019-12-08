@@ -6,6 +6,22 @@
   width: 100%;
 }
 
+.review {
+  position: relative;
+  background-color: #f8faf9;
+}
+
+.review:after {
+  content: '';
+  position: absolute;
+  background-image: url(/Chocco/images/background/review.png);
+  background-repeat: no-repeat;
+  width: rem(123px);
+  height: rem(264px);
+  top: 0;
+  right: 0;
+}
+
 .review__left {
   margin-bottom: 1.7rem;
 }
@@ -14,15 +30,20 @@
   @include tablets {
     width: 65%;
   }
+  @include phones {
+    width: 100%;
+  }
 }
 
 .review__list {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $grey;
   padding: 2.5rem;
   margin-bottom: 1.1rem;
+  @include phones {
+    font-size: rem(18px);
+  }
 }
 
 .review__item {
@@ -56,8 +77,16 @@
 }
 
 .review__image {
-  width: 14rem;
-  height: 14.8rem;
+  width: rem(257px);
+  height: rem(257px);
+  @include tablets {
+    width: rem(208px);
+    height: rem(208px);
+  }
+  @include phones {
+    width: rem(122px);
+    height: rem(122px);
+  }
 }
 
 .review__image-img {

@@ -1,7 +1,7 @@
 .burger-menu {
   display: none;
-  width: 1.38rem;
-  height: 1.38rem;
+  width: rem(25px);
+  height: rem(25px);
   flex-direction: column;
   justify-content: space-between;
   @include tablets {
@@ -11,6 +11,7 @@
 
 .burger-menu__line {
   background-color: white;
-  height: 0.22rem;
+  height: rem(4px);
   width: 100%;
+  border-radius: 5px;
 }

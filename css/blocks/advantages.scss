@@ -102,6 +102,11 @@
   position: relative;
 }
 
+.advantages__decor {
+  @include phones {
+    display: none;
+  }
+}
 
 .advantages__decor--fern {
   top: 0;

@@ -16,13 +16,6 @@
 }
 
 
-.nav__list--active .nav__item {
-  @include tablets {
-    margin-bottom: 2.2rem;
-    font-size: 2rem;
-  }
-}
-
 .nav__link, .nav__phone {
   text-decoration: none;
   color: inherit;
@@ -30,7 +23,7 @@
 
 .nav__phone {
   display: flex;
-  font-size: 1.3rem;
+  font-size: rem(18px);
   align-items: center;
   @include tablets {
     display: none;
@@ -48,4 +41,3 @@
     display: none;
   }
 }
-

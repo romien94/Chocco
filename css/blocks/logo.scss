@@ -1,7 +1,7 @@
 .logo,.logo__text {
-  width: 2.88rem;
+  width: rem(55px);
   font-family: 'Museo';
-  font-size: 24px;
+  font-size: rem(24px);
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
@@ -9,4 +9,5 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin-right: 2.5rem;
+  line-height: 0.9;
 }
