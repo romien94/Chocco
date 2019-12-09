@@ -45,6 +45,10 @@
   }
 }
 
+.form__row--center {
+  justify-content: center;
+}
+
 .form__block {
   display: flex;
   flex-direction: column;

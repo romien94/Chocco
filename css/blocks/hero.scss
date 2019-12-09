@@ -76,6 +76,9 @@
   font-size: rem(21px);
   width: 68%;
   margin-bottom: 1.8rem;
+  @include phones{
+    width: 100%;
+  }
 }
 
 .hero__features {
