@@ -11,7 +11,7 @@ buttonRight.addEventListener('click',function(e) {
 });
 
 function loop(direction, e) {
-  e.preventDefault;
+  e.preventDefault();
   if (direction === 'right') {
     barsItems.appendChild(barsItems.firstElementChild);
   }
