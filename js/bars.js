@@ -1,4 +1,4 @@
-let barsItems = document.querySelectorAll('.bars-slider__item');
+let barsItems = document.querySelector('.bars-slider__list');
 let buttonLeft = document.querySelector('.bars__button--left');
 let buttonRight = document.querySelector('.bars__button--right');
 
