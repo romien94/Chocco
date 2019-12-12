@@ -69,6 +69,7 @@
   }
   @include phones {
     width: 80%;
+    margin-bottom: rem(48px);
   }
 }
 
@@ -78,6 +79,8 @@
   margin-bottom: 1.8rem;
   @include phones{
     width: 100%;
+    font-size: rem(18px);
+    margin-bottom: rem(25px);
   }
 }
 

@@ -18,15 +18,16 @@
 
 
 .bars-slider__item {
-  margin: 0 auto;
+  min-width: 100%;
+  position: relative;
   display: flex;
+  margin: 0 auto;
   @include tablets {
     flex-direction: column;
   }
 }
 
 .bars-slider__item--active {
-  position: relative;
   @include phones {
     align-items: center;
   }

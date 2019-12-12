@@ -2,7 +2,7 @@
   margin-bottom: 2.5rem;
 }
 
-.review, .reviews__list, .review__item  {
+.review, .reviews__list  {
   width: 100%;
 }
 
@@ -37,6 +37,7 @@
 }
 
 .review__list {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
