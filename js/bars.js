@@ -1,20 +1,28 @@
-let barsItem = document.querySelectorAll('.bars-slider__item');
-let right = document.querySelector('.bars__button--right');
-let left = document.querySelector('.bars__button--left');
+const buttonLeft = document.querySelector('.bars__button--left');
+const buttonRight = document.querySelector('.bars__button--right');
+const barsList = document.querySelector('.bars-slider__list');
 
-for (let i = 0; i < barsItem.length; i++) {
-  let barsActive = document.querySelector('.bars-slider__item--active');
-  right.addEventListener('click', function(e) {
-    e.preventDefault();
-    i++;
-    barsActive.classList.remove('bars-slider__item--active');
-    barsItem[i].classList.add('bars-slider__item--active');
-  });
+let currentRight = parseInt(getComputedStyle(barsList).right);
+const minRight = 0;
+const maxRight = (barsList.childElementCount - 1) * 100;
+const step = 100;
 
-  left.addEventListener('click', function(e) {
-    e.preventDefault();
-    i--;
-    barsActive.classList.remove('bars-slider__item--active');
-    barsItem[i].classList.add('bars-slider__item--active');
-  })
-}
+buttonRight.addEventListener('click',function(e) {
+  e.preventDefault();
+  if (currentRight < maxRight) {
+    currentRight += step;
+    barsList.style.right = currentRight + '%';
+  } else {
+    barsList.style.right = 0 + '%';
+  }
+});
+
+buttonLeft.addEventListener('click',function(e) {
+  e.preventDefault();
+  if (currentRight > minRight) {
+    currentRight -= step;
+    barsList.style.right = currentRight + '%';
+  } else {
+      barsList.style.right = 0 + '%';
+    }
+});
