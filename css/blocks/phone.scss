@@ -1,0 +1,33 @@
+.phone {
+  display: flex;
+  font-size: rem(18px);
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav__phone {
+  @include tablets {
+    display: none;
+  }
+}
+
+.phone:before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.3rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;;
+}
+
+.nav__phone:before {
+  background-image: url(/Chocco/images/icons/phone.png);
+}
+
+.footer__phone {
+  color: $green;
+}
+.footer__phone::before {
+  background-image: url(/Chocco/images/icons/phone--green.png);
+}

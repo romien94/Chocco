@@ -1,3 +1,10 @@
+.team {
+  @include phones {
+    height: 0;
+    min-height: 100vh;
+  }
+}
+
 .team .section-title {
   margin-bottom: 3.33rem;
 }
@@ -5,7 +12,6 @@
 .team__list {
   width: 100%;
   display: flex;
-  flex-direction: row;
   @include tablets {
     flex-wrap: wrap;
     justify-content: center;
@@ -18,12 +24,11 @@
 }
 
 .team__item {
-  position: relative;
+  max-width: 13.75rem;
   display: flex;
   flex-direction: column;
   margin-right: rem(20px);
   text-align: center;
-  overflow: hidden;
   align-items: center;
   transition: all .4s;
 }
@@ -36,13 +41,6 @@
   @include tablets {
     margin-right: 0;
   }
-}
-
-
-.team__item--active {
-  overflow: visible;
-  z-index: 20;
-  margin-bottom: 25%;
 }
 
 .team__photo {
@@ -86,15 +84,15 @@
 
 .team__info {
   display: flex;
-  top: 0%;
-  position: absolute;
+  height: 0;
+  overflow: hidden;
   flex-direction: column;
-  z-index: -20;
   transition: all .4s;
+
 }
 
 .team__item--active .team__info  {
-  top: 100%;
+  height: auto;
 }
 
 .team__position {

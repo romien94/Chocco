@@ -14,7 +14,8 @@
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(201,202,204,0.6);
+  background-color: #000;
+  opacity: .1;
   z-index: -10;
 }
 
@@ -32,16 +33,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.menu__left {
   padding-top: rem(95px);
-  height: 100%;
 }
 
 .menu__right {
-  width: 73%;
+  display: flex;
+  flex: 1;
+  position: relative;
   height: 100%;
+  justify-content: flex-end;
   @include tablets {
     position: absolute;
     width: 100%;
@@ -50,86 +50,183 @@
 
 .menu__list {
   display: flex;
+  position: absolute;
   height: 100%;
-  justify-content: flex-end;
-  @include phones {
-    position: relative;
-  }
 }
 
 .menu__item {
   display: flex;
+  height: 100%;
+  transition: all .7s ease;
 }
 
 .menu__item--active {
-  width: 57%;
-  @include phones {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-  }
+  transition: all .7s ease;
 }
+
 
 .menu__title {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  text-decoration: none;
-  align-items: center;
-  background-position: center top;
-  background-size: cover;
-  height: 100%;
-  min-width: rem(101px);
-}
-
-.menu__title-name {
-  position: relative;
-  writing-mode: tb;
-  transform: rotate(-180deg);
-  color: white;
-  font-size: rem(48px);
-  font-weight: 500;
-  z-index: 10;
-}
-@each $menu-background in (coconut,honey,berries)  {
-  .menu__title--#{$menu-background} {
-    background-image: url(/Chocco/images/background/#{$menu-background}.jpg);
+  display: block;
+  width: rem(100px);
+  @include phones {
+    width: rem(80px);
   }
 }
 
 .menu__desc {
-  display: none;
-  padding: rem(50px) rem(120px) rem(50px) rem(25px);
   font-size: rem(16px);
+  width: 0;
+  overflow: hidden;
+  font-size: rem(16px);
+  color: white;
+  background-color: #393c3e;
+  opacity: .9;
+  
+}
+
+.menu__desc p {  
+  padding: rem(50px) rem(100px) rem(50px) rem(25px);
   @include tablets {
-    padding: rem(65px) rem(130px) rem(65px) rem(30px);
+    padding: rem(65px) rem(80px) rem(65px) rem(30px);
   }
   @include phones {
     padding: rem(65px) rem(48px) rem(65px) rem(30px);
   }
 }
 
-.menu__item--active {
-  flex: 1;
+
+.menu__item--active > .menu__desc  {
+  width: auto;
+  transition: all .6s;
 }
 
-.menu__item--active .menu__desc {
+.menu__title {
   position: relative;
   display: flex;
-  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+  text-decoration: none;
+  font-size: rem(48px);
+  font-weight: 500;
 }
 
-
-.menu__desc:after {
-  content: '';
-  background-color: #393c3e;
+.menu__title:after {
+  top: 0;
   position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  opacity: .9;
-  z-index: -1;
+  background: #393c3e;
+  opacity: .5;
 }
+
+@each $menu-background in (coconut,honey,berries)  {
+  .menu__title--#{$menu-background} {
+    background-image: url(/Chocco/images/background/#{$menu-background}.jpg);
+  }
+}
+
+.menu__title-name {
+  display: flex;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  z-index: 20;
+}
+
+// .menu__left {
+//   padding-top: rem(95px);
+//   height: 100%;
+// }
+
+// .menu__right {
+//   position: relative;
+//   width: 73%;
+//   height: 100%;
+//   @include tablets {
+//     width: 100%;
+//   }
+// }
+
+// .menu__list {
+//   width: 100%;
+//   position: absolute;
+//   display: flex;
+//   height: 100%;
+//   justify-content: flex-end;
+// }
+
+// .menu__item {
+//   display: flex;
+//   min-width: 6.3125rem;
+//   height: 100%;
+// }
+
+// .menu__item--active {
+//   @include phones {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 100;
+//   }
+// }
+
+// .menu__title {
+//   position: relative;
+//   display: flex;
+//   justify-content: flex-start;
+//   text-decoration: none;
+//   align-items: center;
+//   background-position: center top;
+//   background-size: cover;
+//   height: 100%;
+//   min-width: rem(101px);
+//   z-index: 20;
+// }
+
+// .menu__title-name {
+//   position: relative;
+//   writing-mode: tb;
+//   transform: rotate(-180deg);
+//   color: white;
+//   font-size: rem(48px);
+//   font-weight: 500;
+//   z-index: 10;
+// }
+// @each $menu-background in (coconut,honey,berries)  {
+//   .menu__title--#{$menu-background} {
+//     background-image: url(/Chocco/images/background/#{$menu-background}.jpg);
+//   }
+// }
+
+// .menu__desc {
+//   position: relative;
+// //   width: 0;
+// //   padding: 0;
+// }
+
+// .menu__item--active {
+//   flex: 1;
+// }
+
+// .menu__item--active .menu__desc {
+//   width: auto;
+//   z-index: 10;
+//   color: white;
+// }
+
+
+// .menu__desc:after {
+//   content: '';
+//   background-color: #393c3e;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   opacity: .9;
+//   z-index: -1;
+// }
