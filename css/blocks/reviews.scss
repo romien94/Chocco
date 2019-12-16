@@ -20,6 +20,12 @@
   height: rem(264px);
   top: 0;
   right: 0;
+  @include tablets {
+    width: rem(115px);
+  }
+  @include phones {
+    display: none;
+  }
 }
 
 .review__left {

@@ -1,9 +1,3 @@
-.team {
-  @include phones {
-    height: 0;
-    min-height: 100vh;
-  }
-}
 
 .team .section-title {
   margin-bottom: 3.33rem;
@@ -12,29 +6,29 @@
 .team__list {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   @include tablets {
+    padding: 0 17%;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 2.5rem;
+    justify-content: space-around;
   }
   @include phones {
-    padding: 0;
-    justify-content: space-around;
+    padding: 0 7%;
   }
 }
 
 .team__item {
-  max-width: 13.75rem;
   display: flex;
   flex-direction: column;
-  margin-right: rem(20px);
-  text-align: center;
   align-items: center;
-  transition: all .4s;
-}
-
-.team__item:last-child {
-  margin: 0;
+  @include tablets {
+    max-width: rem(224px);
+  }
+  @include phones {
+    max-width: rem(168px);
+    margin-right: 0;
+  }
 }
 
 .team__item:nth-child(2n) {
@@ -43,13 +37,21 @@
   }
 }
 
+.team__item:last-child {
+  margin-right: 0;
+}
+
 .team__photo {
+  margin-bottom: rem(20px);
   width: rem(220px);
   height: rem(290px);
-  margin-bottom: 1.4rem;
+  @include tablets {
+    width: rem(224px);
+    height: rem(290px);
+  }
   @include phones {
-    width: 145px;
-    height: 190px;
+    width: rem(145px);
+    height: rem(185px);
   }
 }
 
@@ -62,6 +64,7 @@
 .team__name {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-size: 1.16rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -84,15 +87,18 @@
 
 .team__info {
   display: flex;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   flex-direction: column;
+  text-align: center;
   transition: all .4s;
-
+  max-width: rem(242px);
+  margin-bottom: rem(30px);
 }
 
 .team__item--active .team__info  {
   height: auto;
+  max-height: rem(60px);
 }
 
 .team__position {
