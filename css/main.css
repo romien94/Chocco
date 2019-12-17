@@ -1724,7 +1724,10 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
 
 .menu__left {
   width: 27%;
@@ -1739,7 +1742,9 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 5.9375rem; }
 
 .menu__right {
-  position: absolute;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   top: 0;
   bottom: 0;
   right: 0;
