@@ -1,29 +1,14 @@
-const buttonLeft = document.querySelector('.bars__button--left');
-const buttonRight = document.querySelector('.bars__button--right');
-const barsList = document.querySelector('.bars-slider__list');
+const teamName = document.querySelectorAll('.team__name');
+const teamItem = document.querySelectorAll('.team__item');
 
-let currentRight = parseInt(getComputedStyle(barsList).right);
-const minRight = 0;
-const maxRight = (barsList.childElementCount - 1) * 100;
-const step = 100;
-
-buttonRight.addEventListener('click',function(e) {
-  e.preventDefault();
-  if (currentRight < maxRight) {
-    currentRight += step;
-    barsList.style.right = currentRight + '%';
-  } else {
-    barsList.style.right = minRight;
-  }
-});
-
-buttonLeft.addEventListener('click',function(e) {
-  e.preventDefault();
-  if (currentRight > minRight) {
-    currentRight -= step;
-    barsList.style.right = currentRight + '%';
-  }
-  else {
-    barsList.style.right = maxRight;
-  }
-});
+teamItem.forEach(function(element,index) {
+	element.addEventListener('click',(e)=>{
+  	element.classList.toggle('team__item--active');
+    
+    teamItem.forEach(function(elem,ind) {
+    	if (ind !== index) {
+      	elem.classList.remove('team__item--active');
+      }
+    })
+  })
+})
