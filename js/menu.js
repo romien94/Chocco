@@ -4,7 +4,7 @@ let menuLink = document.querySelectorAll('.menu__title');
 
 menuLink.forEach((element,index) => {
   element.addEventListener('click',(e)=>{
-    e.preventDefault;
+    e.preventDefault();
     menuItem[index].classList.toggle(menuActive);
     
     menuLink.forEach((el,ind) => {
