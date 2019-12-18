@@ -1,14 +1,21 @@
-const teamName = document.querySelectorAll('.team__name');
-const teamItem = document.querySelectorAll('.team__item');
+const button = document.querySelectorAll('.bars__button');
 
-teamItem.forEach(function(element,index) {
-	element.addEventListener('click',(e)=>{
-  	element.classList.toggle('team__item--active');
-    
-    teamItem.forEach(function(elem,ind) {
-    	if (ind !== index) {
-      	elem.classList.remove('team__item--active');
-      }
-    })
+const barsSlider = document.querySelector('.bars-slider__list');
+let currentRight = 0;
+const minRight = 0;
+const maxRight = barsSlider.childElementCount*100;
+const step = 100;
+
+button.forEach((element,index) => {
+  element.addEventListener('click',(e) => {
+    e.preventDefault();
+    if (element.classList.contains('bars__button--right')) {
+      currentRight += step;
+      barsSlider.style.Right = currentRight + '%';
+    }
+    else {
+      currentRight -= step;
+      barsSlider.style.Right = currentRight + '%';
+    }
   })
 })
