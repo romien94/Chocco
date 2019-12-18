@@ -1,21 +1,28 @@
-const button = document.querySelectorAll('.bars__button');
+const buttonLeft = document.querySelector('.bars__button--left');
+const buttonRight = document.querySelector('.bars__button--right');
+const barsList = document.querySelector('.bars-slider__list');
 
-const barsSlider = document.querySelector('.bars-slider__list');
-let currentRight = 0;
+let currentRight = parseInt(getComputedStyle(barsList).right);
 const minRight = 0;
-const maxRight = barsSlider.childElementCount*100;
+const maxRight = (barsList.childElementCount - 1) * 100;
 const step = 100;
 
-button.forEach((element,index) => {
-  element.addEventListener('click',(e) => {
-    e.preventDefault();
-    if (element.classList.contains('bars__button--right')) {
-      currentRight += step;
-      barsSlider.style.Right = currentRight + '%';
-    }
-    else {
-      currentRight -= step;
-      barsSlider.style.Right = currentRight + '%';
-    }
-  })
-})
+buttonRight.addEventListener('click',function(e) {
+  e.preventDefault();
+  if (currentRight == maxRight) {
+    currentRight = minRight;
+  } else {
+    currentRight += step;
+  }
+  barsList.style.right = currentRight + '%';
+});
+
+buttonLeft.addEventListener('click',function(e) {
+  e.preventDefault();
+  if (currentRight == minRight) {
+    currentRight = maxRight;
+  } else {
+    currentRight -= step;
+  }
+  barsList.style.right = currentRight + '%';
+});
