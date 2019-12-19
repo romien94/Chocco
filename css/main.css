@@ -1758,6 +1758,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
@@ -1782,34 +1783,18 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%; }
+  height: 100%;
+  max-width: 6.25rem; }
 
 .menu__item--active {
-  -webkit-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease;
   z-index: 25;
-  -webkit-animation: moveIn .7s ease;
-  animation: moveIn .7s ease; }
+  max-width: 100%;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
   @media screen and (max-width: 480px) {
     .menu__item--active {
       position: absolute; } }
-
-@-webkit-keyframes moveIn {
-  from {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); }
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%); } }
-
-@keyframes moveIn {
-  from {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); }
-  to {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%); } }
 
 .menu__title {
   display: block;
@@ -1820,7 +1805,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .menu__desc {
   font-size: 1rem;
-  width: 0;
   overflow: hidden;
   font-size: 1rem;
   color: white;
@@ -1837,11 +1821,25 @@ h1, h2, h3, h4, h5, h6, p {
     .menu__desc p {
       padding: 4.0625rem 3rem 4.0625rem 1.875rem; } }
 
-.menu__item--active > .menu__desc {
-  width: auto;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+.menu__item--active > .menu__desc p {
+  -webkit-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: translateX(400%);
+    transform: translateX(400%); }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+@keyframes fadeIn {
+  from {
+    -webkit-transform: translateX(400%);
+    transform: translateX(400%); }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
 
 .menu__title {
   position: relative;
