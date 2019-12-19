@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-style: normal; }
 
 .section {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -1207,6 +1207,10 @@ h1, h2, h3, h4, h5, h6, p {
   top: 68%;
   right: 0; }
 
+.team {
+  height: auto;
+  min-height: 100%; }
+
 .team .section-title {
   margin-bottom: 3.33rem; }
 
@@ -1242,7 +1246,9 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 18.125rem;
+  margin-right: 1.25rem; }
   @media screen and (max-width: 768px) {
     .team__item {
       max-width: 14rem; } }
@@ -1259,8 +1265,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 0; }
 
 .team__photo {
+  width: 100%;
   margin-bottom: 1.25rem;
-  width: 13.75rem;
   height: 18.125rem; }
   @media screen and (max-width: 768px) {
     .team__photo {
@@ -1460,7 +1466,9 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover; }
+  object-fit: cover;
+  z-index: 50;
+  position: relative; }
 
 .review__title {
   font-size: 1.6rem;
@@ -1711,6 +1719,7 @@ h1, h2, h3, h4, h5, h6, p {
   z-index: -10; }
 
 .menu__container {
+  height: 100%;
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -1742,6 +1751,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 5.9375rem; }
 
 .menu__right {
+  height: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1772,17 +1782,34 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  -webkit-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease; }
+  height: 100%; }
 
 .menu__item--active {
   -webkit-transition: all .7s ease;
   -o-transition: all .7s ease;
   transition: all .7s ease;
-  position: absolute;
-  z-index: 25; }
+  z-index: 25;
+  -webkit-animation: moveIn .7s ease;
+  animation: moveIn .7s ease; }
+  @media screen and (max-width: 480px) {
+    .menu__item--active {
+      position: absolute; } }
+
+@-webkit-keyframes moveIn {
+  from {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%); }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+
+@keyframes moveIn {
+  from {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%); }
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
 
 .menu__title {
   display: block;
@@ -1812,9 +1839,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .menu__item--active > .menu__desc {
   width: auto;
-  -webkit-transition: all .6s;
-  -o-transition: all .6s;
-  transition: all .6s; }
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
 
 .menu__title {
   position: relative;
@@ -1971,3 +1998,52 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer__phone::before {
   background-image: url(/Chocco/images/icons/phone--green.png); }
+
+.modal {
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .9;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 50; }
+
+.modal--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.modal__window {
+  width: 20rem;
+  height: 10rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 50;
+  opacity: 1; }
+
+.modal__message {
+  margin-bottom: 1rem; }

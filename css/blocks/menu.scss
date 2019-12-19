@@ -20,6 +20,7 @@
 }
 
 .menu__container {
+  height: 100%;
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -39,6 +40,7 @@
 }
 
 .menu__right {
+  height: 100%;
   flex: 1;
   top: 0;
   bottom: 0;
@@ -62,13 +64,24 @@
 .menu__item {
   display: flex;
   height: 100%;
-  transition: all .7s ease;
 }
 
 .menu__item--active {
   transition: all .7s ease;
-  position: absolute;
   z-index: 25;
+  @include phones {
+    position: absolute;
+  }
+  animation: moveIn .7s ease;
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 
@@ -104,7 +117,7 @@
 
 .menu__item--active > .menu__desc  {
   width: auto;
-  transition: all .6s;
+  transition: all 1s;
 }
 
 .menu__title {
