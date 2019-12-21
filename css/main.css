@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-style: normal; }
 
 .section {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -1794,7 +1794,8 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all 1s; }
   @media screen and (max-width: 480px) {
     .menu__item--active {
-      position: absolute; } }
+      position: absolute;
+      width: 100%; } }
 
 .menu__title {
   display: block;
@@ -1811,6 +1812,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #393c3e;
   opacity: .9;
   height: 100%; }
+  @media screen and (max-width: 480px) {
+    .menu__desc {
+      max-width: 0; } }
 
 .menu__desc p {
   padding: 3.125rem 6.25rem 3.125rem 1.5625rem; }
@@ -1820,6 +1824,9 @@ h1, h2, h3, h4, h5, h6, p {
   @media screen and (max-width: 480px) {
     .menu__desc p {
       padding: 4.0625rem 3rem 4.0625rem 1.875rem; } }
+
+.menu__item--active .menu__desc {
+  max-width: 100%; }
 
 .menu__item--active > .menu__desc p {
   -webkit-animation: fadeIn 1s ease;

@@ -74,6 +74,7 @@
   transition: all 1s;
   @include phones {
     position: absolute;
+    width: 100%;
   }
 }
 
@@ -93,7 +94,10 @@
   color: white;
   background-color: #393c3e;
   opacity: .9;
-  height: 100%;  
+  height: 100%;
+  @include phones {
+    max-width: 0;
+  }
 }
 
 .menu__desc p {  
@@ -106,6 +110,10 @@
   }
 }
 
+
+.menu__item--active .menu__desc {
+  max-width: 100%;
+}
 
 .menu__item--active > .menu__desc p  {
   animation: fadeIn 1s ease;
