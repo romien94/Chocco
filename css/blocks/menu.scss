@@ -163,6 +163,10 @@
 .menu__title-name {
   display: flex;
   white-space: nowrap;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-150px);
   z-index: 20;
+
+  @include phones {
+    transform: rotate(-90deg) translateX(-120px);
+  }
 }
