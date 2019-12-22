@@ -2,7 +2,7 @@ const buttonLeft = document.querySelector('.bars__button--left');
 const buttonRight = document.querySelector('.bars__button--right');
 const barsList = document.querySelector('.bars-slider__list');
 
-let currentRight = parseInt(getComputedStyle(barsList).right);
+let currentRight = 0;
 const minRight = 0;
 const maxRight = (barsList.childElementCount - 1) * 100;
 const step = 100;

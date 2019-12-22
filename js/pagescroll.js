@@ -35,18 +35,17 @@ const performTransition = sectionEq => {
     }, transitionIsOver + mouseInertion);
 };
 
-const scroller = () => {
+const scrollToSection = direction => {
   const activeSection = sections.filter('.section--active');
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
 
-  return {
-    next() {
-      if (nextSection.length) performTransition(nextSection.index());
-    },
-    prev() {
-      if (prevSection.length) performTransition(prevSection.index());
-    }
+  if (direction == "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+
+  if (direction == "prev" && prevSection.length) {
+    performTransition(prevSection.index());   
   }
 };
 
@@ -54,26 +53,25 @@ $(window).on("wheel", (e) => {
   const deltaY = e.originalEvent.deltaY;
 
   if (deltaY > 0) {
-    scroller.next()
+    scrollToSection("next");
   }
   if (deltaY < 0) {
-   scroller.prev()
+   scrollToSection("prev");
   }
 })
 
 $(window).on("keydown", (e) => {
   const tagName = e.target.tagName.toLowerCase();
   const userTypingInInputs = tagName === "textarea" || tagName === "input";
-  const windowScroller = scroller();
 
   if (userTypingInInputs) return;
 
   switch(e.key) {
     case "ArrowDown": 
-    windowScroller.next(); 
+    scrollToSection("next");
     break;
     case "ArrowUp":
-      windowScroller.prev(); 
+    scrollToSection("prev");
     break;
 
   }
