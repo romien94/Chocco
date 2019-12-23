@@ -15,6 +15,10 @@
     align-items: flex-end;
     align-items: center;
   }
+
+  @include phones {
+    padding-top: 2rem;
+  }
 }
 
 .hero__bars {
@@ -26,7 +30,7 @@
 }
 
 .hero__decor {
-  max-width: 55%;
+  max-width: 65%;
   position: absolute;
   &--fern {
     right: 0;
@@ -47,8 +51,17 @@
       transform: translate(-26%,-85%);
     }
     @include phones {
-    width: 70%;
+    width: 67%;
+    top: 45%;
+    right: -1%;
     }
+  }
+}
+
+.hero__decor--fern {
+  @include phones {
+    top: 41%;
+    right: 0%;
   }
 }
 
@@ -70,6 +83,7 @@
   @include phones {
     width: 80%;
     margin-bottom: rem(48px);
+    padding-bottom: rem(15px);
   }
 }
 
@@ -78,8 +92,8 @@
   width: 68%;
   margin-bottom: 1.8rem;
   @include phones{
-    width: 100%;
-    font-size: rem(18px);
+    width: 83%;
+    font-size: 18px;
     margin-bottom: rem(25px);
   }
 }

@@ -10,4 +10,7 @@
   flex-direction: column;
   margin-right: 2.5rem;
   line-height: 0.9;
+  @include phones {
+    font-size: 1.8rem;
+  }
 }

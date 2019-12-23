@@ -4,6 +4,12 @@
   background-size: cover;
 }
 
+.delivery .section-title {
+  @include phones {
+    font-size: 40px;
+  }
+}
+
 .form {
   width: 100%;
 }
@@ -69,6 +75,7 @@
 .form__input {
   width: 100%;
   padding: 0.8rem 0.5rem;
+  background-color: white;
 }
 
 .form__input--review {

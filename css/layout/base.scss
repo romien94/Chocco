@@ -44,6 +44,12 @@ body {
 
 input, textarea, button {
   border: none;
+  background: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
 }
 
 ul, li {
@@ -75,7 +81,8 @@ h1,h2,h3,h4,h5,h6,p {
   font-weight: bold;
   text-transform: uppercase;
   @include phones {
-    font-size: rem(46px);
+    font-size: 46px;
+    margin-bottom: rem(20px);
   }
 }
 

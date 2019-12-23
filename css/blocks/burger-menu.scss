@@ -6,7 +6,12 @@
   justify-content: space-between;
   @include tablets {
     display: flex;
+    z-index: 11;
   }
+}
+
+.nav__active ~ .burger-menu {
+  display: none;
 }
 
 .burger-menu__line {

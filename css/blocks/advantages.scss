@@ -10,6 +10,10 @@
   }
 }
 
+.advantages .section-title {
+  font-size: 40px;
+}
+
 .advantages__content {
   text-align: center;
   @include phones {
@@ -24,6 +28,7 @@
   width: 45%;
   @include phones {
     width: 100%;
+    font-size: 18px;
   }
 }
 
