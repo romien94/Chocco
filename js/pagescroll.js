@@ -87,6 +87,7 @@ $('[data-scroll-to]').on("click", (e) => {
 if (isMobile) {
   $("body").swipe( {
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      event.preventDefault();
       const scrollDirection = direction === "up"? "next": "prev";
       scrollToSection(scrollDirection);
     }
