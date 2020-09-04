@@ -40,7 +40,7 @@
     "gulp-smile-px2rem": "^0.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "gulp": "cross-env NODE_ENV=dev gulp",
